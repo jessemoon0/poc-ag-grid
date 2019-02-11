@@ -1,0 +1,26 @@
+<button (click)="getSelectedRows()">Get Selected Rows</button>
+
+<div fxLayout="row" fxLayoutGap="1rem">
+  <ag-grid-angular
+    #agGrid
+    style="width: 500px; height: 500px;"
+    class="ag-theme-balham"
+    [rowData]="rowData$ | async"
+    [defaultColDef]="defaultColDef"
+    [columnDefs]="columnDefs"
+    rowSelection="multiple">
+  </ag-grid-angular>
+
+  <ag-grid-angular
+    #agGridGroup
+    style="width: 500px; height: 500px;"
+    class="ag-theme-balham"
+    [rowData]="groupRowData$ | async"
+    [defaultColDef]="defaultColDef"
+    [columnDefs]="groupColumnDefs"
+    rowSelection="multiple"
+    [autoGroupColumnDef]="autoGroupColumnDef">
+  </ag-grid-angular>
+</div>
+
+
