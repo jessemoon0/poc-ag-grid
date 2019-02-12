@@ -22,7 +22,7 @@ export class GettingStartedComponent implements OnInit {
   };
 
   columnDefs: ColDef[] = [
-    { headerName: 'Make', field: 'make', checkboxSelection: true },
+    { headerName: 'Make', field: 'make', checkboxSelection: true, sortingOrder: ['desc', 'asc'] },
     { headerName: 'Model', field: 'model' },
     { headerName: 'Price', field: 'price' }
   ];
