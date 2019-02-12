@@ -36,7 +36,7 @@ export class GettingStartedComponent implements OnInit {
 
   groupRowData$: Observable<IGettingStartedData[]>;
 
-  autoGroupColumnDef = {
+  autoGroupColumnDef: ColDef = {
     headerName: 'Model',
     field: 'model',
     cellRenderer: 'agGroupCellRenderer',
